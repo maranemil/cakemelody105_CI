@@ -1,4 +1,4 @@
-<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 /*
 | -------------------------------------------------------------------
 | DATABASE CONNECTIVITY SETTINGS
@@ -38,27 +38,25 @@ $active_group = "default";
 $active_record = TRUE;
 
 // OFFLINE
-if(  stristr($_SERVER['HTTP_HOST'], 'localhost')  || $_SERVER['SERVER_ADDR']=='127.0.0.1' ){
-	$iServer = 0;
-}
-// RTS Development
-else{
-	$iServer = 1;
+if (stristr($_SERVER['HTTP_HOST'], 'localhost') || $_SERVER['SERVER_ADDR'] == '127.0.0.1') {
+    $iServer = 0;
+} // RTS Development
+else {
+    $iServer = 1;
 }
 
-if($iServer==1){
-	// online
-	$db['default']['hostname'] = "localhost"; 
-	$db['default']['username'] = "user";
-	$db['default']['password'] = "pass";
-	$db['default']['database'] = "cakemelody104";
-}
-else {
-	// offline
-	$db['default']['hostname'] = "localhost";
-	$db['default']['username'] = "root";
-	$db['default']['password'] = "";
-	$db['default']['database'] = "cakemelody104"; 
+if ($iServer == 1) {
+    // online
+    $db['default']['hostname'] = "localhost";
+    $db['default']['username'] = "user";
+    $db['default']['password'] = "pass";
+    $db['default']['database'] = "cakemelody104";
+} else {
+    // offline
+    $db['default']['hostname'] = "localhost";
+    $db['default']['username'] = "root";
+    $db['default']['password'] = "";
+    $db['default']['database'] = "cakemelody104";
 }
 
 $db['default']['dbdriver'] = "mysql"; // oci8 oracle

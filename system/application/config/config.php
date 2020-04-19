@@ -1,4 +1,4 @@
-<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 session_start();
 
 /*
@@ -14,42 +14,41 @@ session_start();
 */
 
 // OFFLINE
-if(  stristr($_SERVER['HTTP_HOST'], 'localhost')  || $_SERVER['SERVER_ADDR']=='127.0.0.1' ){
-	$iServer = 0;
+if (stristr($_SERVER['HTTP_HOST'], 'localhost') || $_SERVER['SERVER_ADDR'] == '127.0.0.1') {
+    $iServer = 0;
 }
 
-if($iServer == 0){
+if ($iServer == 0) {
 
-	//$root = "http://".$_SERVER['HTTP_HOST'];
-	//$root .= str_replace(basename($_SERVER['SCRIPT_NAME']),"",$_SERVER['SCRIPT_NAME']);
-	//$config['base_url']    = "$root";  
+    //$root = "http://".$_SERVER['HTTP_HOST'];
+    //$root .= str_replace(basename($_SERVER['SCRIPT_NAME']),"",$_SERVER['SCRIPT_NAME']);
+    //$config['base_url']    = "$root";
 
-	$config['base_url'] = "http://".$_SERVER['HTTP_HOST'];
-	$config['base_url'] .= preg_replace('@/+$@','',dirname($_SERVER['SCRIPT_NAME'])).'/';  
+    $config['base_url'] = "http://" . $_SERVER['HTTP_HOST'];
+    $config['base_url'] .= preg_replace('@/+$@', '', dirname($_SERVER['SCRIPT_NAME'])) . '/';
 
-	/*
-	$config['base_url'] = "http://".$_SERVER['HTTP_HOST'];
-	$config['base_url'] .= str_replace(basename($_SERVER['SCRIPT_NAME']),"",$_SERVER['SCRIPT_NAME']); 
+    /*
+    $config['base_url'] = "http://".$_SERVER['HTTP_HOST'];
+    $config['base_url'] .= str_replace(basename($_SERVER['SCRIPT_NAME']),"",$_SERVER['SCRIPT_NAME']);
 
-	#Once thats added, Codeigniter base_url will adapt to whatever the url you’re using.
+    #Once thats added, Codeigniter base_url will adapt to whatever the url youï¿½re using.
 
-	#Here a version that works for both: http and https:
-	$config['base_url'] = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == "on") ? "https" : "http");
-	$config['base_url'] .= "://".$_SERVER['HTTP_HOST'];
-	$config['base_url'] .= str_replace(basename($_SERVER['SCRIPT_NAME']),"",$_SERVER['SCRIPT_NAME']); 
+    #Here a version that works for both: http and https:
+    $config['base_url'] = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == "on") ? "https" : "http");
+    $config['base_url'] .= "://".$_SERVER['HTTP_HOST'];
+    $config['base_url'] .= str_replace(basename($_SERVER['SCRIPT_NAME']),"",$_SERVER['SCRIPT_NAME']);
 
-	#Or you can just put use this (pretty much the same as above):
-	$config['base_url'] = 'http' . ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') ? 's' : '')
-						  .'://'.$_SERVER['HTTP_HOST'].str_replace('//','/',dirname($_SERVER['SCRIPT_NAME']).'/'); 
-	*/
+    #Or you can just put use this (pretty much the same as above):
+    $config['base_url'] = 'http' . ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') ? 's' : '')
+                          .'://'.$_SERVER['HTTP_HOST'].str_replace('//','/',dirname($_SERVER['SCRIPT_NAME']).'/');
+    */
 
-	$config['base_url_img']			= $config['base_url']."image/";
-	$config['base_url_img_root']	= 'C:\xampp\htdocs\cakemelody104CI\templates\demo\static';
-}
-else {
-	$config['base_url']				= "http://www.yourdomain.com/";
-	$config['base_url_img']			= "http://www.yourdomain.com/image/";
-	$config['base_url_img_root']	= $_SERVER["DOCUMENT_ROOT"].'/yourpath/';
+    $config['base_url_img'] = $config['base_url'] . "image/";
+    $config['base_url_img_root'] = 'C:\xampp\htdocs\cakemelody104CI\templates\demo\static';
+} else {
+    $config['base_url'] = "http://www.yourdomain.com/";
+    $config['base_url_img'] = "http://www.yourdomain.com/image/";
+    $config['base_url_img_root'] = $_SERVER["DOCUMENT_ROOT"] . '/yourpath/';
 }
 
 /*
@@ -83,7 +82,7 @@ $config['index_page'] = '';
 |
 */
 
-$config['uri_protocol']	= "AUTO";
+$config['uri_protocol'] = "AUTO";
 //$config['uri_protocol']= 'query_string';
 
 /*
@@ -109,7 +108,7 @@ $config['url_suffix'] = "";
 | than english.
 |
 */
-$config['language']	= "english";
+$config['language'] = "english";
 
 /*
 |--------------------------------------------------------------------------
@@ -193,9 +192,9 @@ $config['permitted_uri_chars'] = 'a-z 0-9~%.:_\-';
 */
 
 $config['enable_query_strings'] = FALSE;
-$config['controller_trigger'] 	= 'c';
-$config['function_trigger'] 	= 'm';
-$config['directory_trigger'] 	= 'd'; // experimental not currently in use
+$config['controller_trigger'] = 'c';
+$config['function_trigger'] = 'm';
+$config['directory_trigger'] = 'd'; // experimental not currently in use
 
 /*
 |--------------------------------------------------------------------------
@@ -275,14 +274,14 @@ $config['encryption_key'] = "";
 | 'time_to_update'		= how many seconds between CI refreshing Session Information
 |
 */
-$config['sess_cookie_name']		= 'ci_session';
-$config['sess_expiration']		= 7200;
-$config['sess_encrypt_cookie']	= FALSE;
-$config['sess_use_database']	= FALSE;
-$config['sess_table_name']		= 'ci_sessions';
-$config['sess_match_ip']		= FALSE;
-$config['sess_match_useragent']	= TRUE;
-$config['sess_time_to_update'] 	= 300;
+$config['sess_cookie_name'] = 'ci_session';
+$config['sess_expiration'] = 7200;
+$config['sess_encrypt_cookie'] = FALSE;
+$config['sess_use_database'] = FALSE;
+$config['sess_table_name'] = 'ci_sessions';
+$config['sess_match_ip'] = FALSE;
+$config['sess_match_useragent'] = TRUE;
+$config['sess_time_to_update'] = 300;
 
 /*
 |--------------------------------------------------------------------------
@@ -294,9 +293,9 @@ $config['sess_time_to_update'] 	= 300;
 | 'cookie_path'   =  Typically will be a forward slash
 |
 */
-$config['cookie_prefix']	= "";
-$config['cookie_domain']	= "";
-$config['cookie_path']		= "/";
+$config['cookie_prefix'] = "";
+$config['cookie_domain'] = "";
+$config['cookie_path'] = "/";
 
 /*
 |--------------------------------------------------------------------------

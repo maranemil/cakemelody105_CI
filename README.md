@@ -1,4 +1,4 @@
 cakemelody105_CI
 ================
 
-codeigniter based bookmarks script for youtube videos
+codeigniter 1.7.2 based bookmarks script for youtube videos

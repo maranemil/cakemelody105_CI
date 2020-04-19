@@ -1,4 +1,4 @@
-<?
+<?php
 /*
 session_start();
 
@@ -17,26 +17,21 @@ else{
 echo $language;
 */
 ?>
-<?
+<?php
 
-if ( ! function_exists('labels_app'))
-{
-	function labels_app($language)
-	{
-		//global $language;
-		$LBL = array();
-		
-		if($language==1){
-			// general labels
-			$LBL["general"]["Welcome"]				= "Hi";
-		}
-		else{
-			// general labels
-			$LBL["general"]["Welcome"]				= "Hallo";
-		}
-
-		return $LBL;
-	}
+if (!function_exists('labels_app')) {
+    function labels_app($language)
+    {
+        //global $language;
+        $LBL = array();
+        if ($language == 1) {
+            // general labels
+            $LBL["general"]["Welcome"] = "Hi";
+        } else {
+            // general labels
+            $LBL["general"]["Welcome"] = "Hallo";
+        }
+        return $LBL;
+    }
 }
-
 ?>

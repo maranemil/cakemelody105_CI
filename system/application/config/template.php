@@ -1,4 +1,4 @@
-<?php  if (!defined('BASEPATH')) exit('No direct script access allowed');
+<?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 /*
 |--------------------------------------------------------------------------
 | Active template
@@ -60,9 +60,9 @@ $template['default']['template'] = 'master.php';
 */
 
 $template['default']['regions'] = array(
-  'header',
-  'content',
-  'footer'
+    'header',
+    'content',
+    'footer'
 );
 
 /* End of file template.php */
