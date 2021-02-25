@@ -5,7 +5,7 @@ class Model_User extends Model
 
     //public $tables = array();
 
-    function Model_User()
+    function __construct()
     {
         parent::Model();
     }
