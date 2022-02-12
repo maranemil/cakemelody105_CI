@@ -1,33 +1,38 @@
-<?php
+<?php /** @noinspection PhpMissingParentConstructorInspection */
+/** @noinspection AutoloadingIssuesInspection */
+/** @noinspection PhpUnused */
 
+/**
+ * @property $db
+ */
 class Model_Video extends Model {
 
-   function __construct() {
-	  parent::Model();
+   public function __construct() {
+	  $this->Model();
    }
 
-   function get() {
+   public function get() {
 	  $this->db->order_by('id DESC');
 	  return $this->db->get('videos');
    }
 
-   function count_all() {
+   public function count_all() {
 	  $this->db->order_by('id DESC');
 	  return $this->db->get('videos');
    }
 
-   function count_allbycat($catId) {
+   public function count_allbycat($catId) {
 	  $this->db->where(array('category_id' => $catId));
 	  $this->db->order_by('id DESC');
 	  return $this->db->get('videos');
    }
 
-   function getbypagination($limit, $offset, $sort) {
+   public function getbypagination($limit, $offset, $sort) {
 	  $this->db->order_by($sort . ' DESC');
 	  return $this->db->get('videos', $limit, $offset);
    }
 
-   function getbypaginationandcat($limit, $offset, $sort, $catId) {
+   public function getbypaginationandcat($limit, $offset, $sort, $catId) {
 	  //echo $limit."--".$offset."--".$sort."--".$catId;
 
 	  $this->db->where(array('category_id' => $catId));
@@ -37,35 +42,38 @@ class Model_Video extends Model {
 	  return $this->db->get('videos');
    }
 
-   function update($idvideo, $data) {
+   public function update($idvideo, $data) {
 	  $this->db->where(array('id' => $idvideo));
 	  $this->db->update('videos', $data);
    }
 
-   function updateTable($table, $fieldArray, $conditionArray) {
-	  if (trim($table) != '' and !empty($fieldArray) and !empty($conditionArray)) {
-		 foreach ($conditionArray as $key => $value) $this->db->where($key, $value);
+   public function updateTable($table, $fieldArray, $conditionArray) {
+	  if (trim($table) !== '' && !empty($fieldArray) && !empty($conditionArray)) {
+		 foreach ($conditionArray as $key => $value) {
+             $this->db->where($key, $value);
+         }
 		 $this->db->limit(1);
 		 $this->db->update(trim($table), $fieldArray);
 		 return true;
 	  }
-	  else  return false;
+
+       return false;
    }
 
-   function add($data) {
+   public function add($data) {
 	  $this->db->insert('videos', $data);
    }
 
-   function getMaxId() {
+   public function getMaxId() {
 	  $this->db->select_max('id');
 	  return $this->db->get('videos');
    }
 
-   function delete($idval) {
+   public function delete($idval) {
 	  $this->db->delete('videos', array('id' => $idval));
    }
 
-   function getbyid($idvideo) {
+   public function getbyid($idvideo) {
 	  $this->db->where(array('id' => $idvideo));
 	  return $this->db->get('videos');
    }

@@ -3,7 +3,7 @@
     <h1>What is this?!</h1><br/>
 
     A Social Portal or Social Community Demo developed in CodeIgniter giving You possibility to save your favorite music
-    songs from Youtube by categories. <br/><br/>
+    songs from YouTube by categories. <br/><br/>
     CodeIgniter core version used is 1.7.2 <br/>
     The purpose of this application is teaching and understand how CodeIgniter it works. <br/>
     I start to develop this cakephp app because I wanted to keep all my fav. songs in my website. Is still under
@@ -14,11 +14,11 @@
     <h3>Possible applications using this script or platform with modifications are:</h3> <br/>
 
     - Any social community website where user module is needed <br/>
-    - Bookmarking App Website (bookmarks Controller) <A HREF="http://imagine-things.com/" target="_blank">http://imagine-things.com</A><br/>
-    - Video & youtube App Website (videos Controller) <A HREF="http://eopp.de" target="_blank">http://eopp.de</A><br/>
-    - Classifieds App Website <A HREF="http://publion.ro" target="_blank">http://publion.ro</A><br/>
-    - Hotels App Website (hotels Controller) <A HREF="http://booking-zone.com/"
-                                                target="_blank">http://booking-zone.com</A><br/>
+    - Bookmarking App Website (bookmarks Controller) <A HREF="https://imagine-things.com/" target="_blank">https://imagine-things.com</A><br/>
+    - Video & youtube App Website (videos Controller) <A HREF="https://eopp.de" target="_blank">https://eopp.de</A><br/>
+    - Classifieds App Website <A HREF="https://publion.ro" target="_blank">https://publion.ro</A><br/>
+    - Hotels App Website (hotels Controller) <A HREF="https://booking-zone.com/"
+                                                target="_blank">https://booking-zone.com</A><br/>
     - Image Galleries App Website (images Controller) <br/>
     - Mp3 Music App Website (mp3s Controller) <br/>
     - Blog App Website (blogs Controller) <br/>
@@ -26,7 +26,7 @@
     - Jobs App Website (jobs Controller) <br/>
     - News App Website (news Controller) <br/><br/>
 
-    <h3>Download source from <a href="http://code.google.com/p/marancakemelody/" target="_blank">code.google.com</a>
+    <h3>Download source from <a href="https://code.google.com/p/marancakemelody/" target="_blank">code.google.com</a>
     </h3><br/><br/>
 
     <h3>Features:</h3><br/>
@@ -58,11 +58,11 @@
 
     <h3>Resources and inspiration from: </h3><br/>
 
-    <a href="http://cakeforge.org/projects/mio-blog/" target="_blank">http://cakeforge.org/projects/mio-blog/</a><br/>
-    <a href="http://cakeforge.org/projects/classifieds/"
-       target="_blank">http://cakeforge.org/projects/classifieds/</a><br/>
-    <a href="http://cakeforge.org/projects/timesheet/" target="_blank">http://cakeforge.org/projects/timesheet/</a><br/>
-    <a href="http://cakeforge.org/projects/eventportal/"
-       target="_blank">http://cakeforge.org/projects/eventportal/</a><br/>
+    <a href="https://cakeforge.org/projects/mio-blog/" target="_blank">https://cakeforge.org/projects/mio-blog/</a><br/>
+    <a href="https://cakeforge.org/projects/classifieds/"
+       target="_blank">https://cakeforge.org/projects/classifieds/</a><br/>
+    <a href="https://cakeforge.org/projects/timesheet/" target="_blank">https://cakeforge.org/projects/timesheet/</a><br/>
+    <a href="https://cakeforge.org/projects/eventportal/"
+       target="_blank">https://cakeforge.org/projects/eventportal/</a><br/>
 
 </div>

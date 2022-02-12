@@ -26,6 +26,7 @@
  * @category	Libraries
  * @author		ExpressionEngine Dev Team
  * @link		http://codeigniter.com/user_guide/general/controllers.html
+ * @method __construct()
  */
 class Controller extends CI_Base {
 

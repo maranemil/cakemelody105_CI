@@ -60,8 +60,8 @@ $application_folder = "application";
 |
 */
 if (strpos($system_folder, '/') === false) {
-   if (function_exists('realpath') and @realpath(dirname(__FILE__)) !== false) {
-	  $system_folder = realpath(dirname(__FILE__)) . '/' . $system_folder;
+   if (function_exists('realpath') && @realpath(__DIR__) !== false) {
+	  $system_folder = realpath(__DIR__) . '/' . $system_folder;
    }
 }
 else {
@@ -81,7 +81,7 @@ else {
 | APPPATH	- The full server path to the "application" folder
 |
 */
-define('EXT', '.php');
+const EXT = '.php';
 define('SELF', pathinfo(__FILE__, PATHINFO_BASENAME));
 define('FCPATH', str_replace(SELF, '', __FILE__));
 define('BASEPATH', $system_folder . '/');
@@ -90,11 +90,7 @@ if (is_dir($application_folder)) {
    define('APPPATH', $application_folder . '/');
 }
 else {
-   if ($application_folder == '') {
-	  $application_folder = 'application';
-   }
-
-   define('APPPATH', BASEPATH . $application_folder . '/');
+    define('APPPATH', BASEPATH . $application_folder . '/');
 }
 
 /*

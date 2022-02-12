@@ -2,7 +2,7 @@
     <H1>Willkommen zu Portal!</H1><br/>
     Bestprice ist ein Ort wo du dich mit Freunden unterhalten, dein eigenes Firma schreiben, kannst. <br/><br/>
     Diese Dienste werden nat&uuml;rlich <b>kostenlos</b> zur Verf&uuml;gung gestellt, du musst dich
-    nur <?php echo $html->link('registrieren', '/users/register'); ?>.<br/><br/>
+    nur /** @noinspection PhpUndefinedVariableInspection */<?php echo $html->link('registrieren', '/users/register'); ?>.<br/><br/>
     Wenn du schon ein registrierter Benutzer bist, kannst du
     dich <?php echo $html->link('hier anmelden', '/users/login'); ?>.<br/><br/>
     Und vergiss nicht: Wenn dir diese Seite gef&auml;llt, erz&auml;hl bitte deinen Freunden davon! <br/><br/>

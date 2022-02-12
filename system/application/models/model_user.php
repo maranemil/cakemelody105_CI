@@ -1,51 +1,58 @@
-<?php if (!defined('BASEPATH')) exit('No direct script access allowed');
+<?php /** @noinspection AutoloadingIssuesInspection */
+/** @noinspection PhpUnused */
+if (!defined('BASEPATH')) {
+    exit('No direct script access allowed');
+}
 
+/**
+ * @property $db
+ */
 class Model_User extends Model
 {
 
     //public $tables = array();
 
-    function __construct()
+    public function __construct()
     {
-        parent::Model();
+        $this->Model();
     }
 
-    function get()
-    {
-        $this->db->order_by('id DESC');
-        return $this->db->get('users');
-    }
-
-    function count_all()
+    public function get()
     {
         $this->db->order_by('id DESC');
         return $this->db->get('users');
     }
 
-    function getbypagination($limit, $offset, $sort)
+    public function count_all()
+    {
+        $this->db->order_by('id DESC');
+        return $this->db->get('users');
+    }
+
+    public function getbypagination($limit, $offset, $sort)
     {
         $this->db->order_by($sort . ' DESC');
         return $this->db->get('users', $limit, $offset);
     }
 
-    function update($idvideo, $data)
+    public function update($idvideo, $data)
     {
         $this->db->where(array('id' => $idvideo));
         $this->db->update('users', $data);
     }
 
-    function add($data)
+    public function add($data)
     {
         $this->db->insert('users', $data);
     }
 
-    function getMaxId()
+    public function getMaxId()
     {
         $this->db->select_max('id');
         return $this->db->get('users');
     }
 
-    function getbylogin($loguser, $logpassword)
+    public function getbylogin($loguser, $logpassword)
     {
         //$this->db->select('username,password');
         $this->db->where(array("username" => trim($loguser), "password" => md5($logpassword)));

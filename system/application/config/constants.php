@@ -1,4 +1,7 @@
-<?php if (!defined('BASEPATH')) exit('No direct script access allowed');
+<?php /** @noinspection PhpDefineCanBeReplacedWithConstInspection */
+if (!defined('BASEPATH')) {
+    exit('No direct script access allowed');
+}
 
 /*
 |--------------------------------------------------------------------------

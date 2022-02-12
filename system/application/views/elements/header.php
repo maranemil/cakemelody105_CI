@@ -20,7 +20,7 @@ $this->arSesUsr = $this->session->all_userdata();
         CodeIgniter enables PHP users at all levels to rapidly develop robust web applications.
 
         CodeIgniter is a free open source Framework licensed under GNU/GPL.
-        Information and contribution at http://codeigniter.com/
+        Information and contribution at https://codeigniter.com/
     -->
 
     <meta name="keywords" content="Social Portal, Youtube Songs, Favourites "/>
@@ -41,10 +41,10 @@ $this->arSesUsr = $this->session->all_userdata();
     <script type="text/javascript" src="<?php echo base_url(); ?>webroot/js/jquery-impromptu.3.1.js"></script>
     <!-- jquery-impromptu -->
 
-    <!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script> -->
+    <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script> -->
 
     <?php
-    if (strstr($_SERVER['HTTP_USER_AGENT'], 'MSIE 7.')) {
+    if (strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE 7.') !== false) {
         echo '<meta http-equiv="X-UA-Compatible" content="IE=7" />';
     }
     ?>
@@ -63,8 +63,8 @@ $this->arSesUsr = $this->session->all_userdata();
 <div id="navxbar">
     <div id="navbar">
         <div style="float: left; margin: 8px 20px 5px 0">
-            <? if ($this->session->userdata('username')) { ?>
-                Logged as: &nbsp; <A HREF=""><?= $this->session->userdata('username'); ?></A> |
+            <?php if ($this->session->userdata('username')) { ?>
+                Logged as: &nbsp; <A HREF=""><?= $this->session->userdata('username') ?></A> |
                 <A HREF="<?php echo base_url(); ?>users/logout">Logout</A>
             <?php } else { ?>
                 <?php echo form_open(base_url() . 'users/login/'); ?>
@@ -72,11 +72,11 @@ $this->arSesUsr = $this->session->all_userdata();
                     <tr>
                         <td>
                             Login: &nbsp;
-                            <?php echo form_input(array('name' => 'username', 'value' => 'email@', 'type' => 'text', 'class' => 'input_medium', 'size' => '15', 'onfocus' => "this.value=&quot;&quot;", "id" => "UserUsername")) . ''; ?>
+                            <?php echo form_input(array('name' => 'username', 'value' => 'email@', 'type' => 'text', 'class' => 'input_medium', 'size' => '15', 'onfocus' => "this.value=&quot;&quot;", "id" => "UserUsername")); ?>
                             <br/>
                         </td>
                         <td>
-                            <?php echo form_input(array('name' => 'password', 'value' => 'password', 'type' => 'password', 'class' => 'input_medium', 'size' => '15', 'onfocus' => "this.value=&quot;&quot;", "id" => "UserPassword")) . ''; ?>
+                            <?php echo form_input(array('name' => 'password', 'value' => 'password', 'type' => 'password', 'class' => 'input_medium', 'size' => '15', 'onfocus' => "this.value=&quot;&quot;", "id" => "UserPassword")); ?>
                             <br/>
                         </td>
                         <td>
@@ -100,7 +100,7 @@ $this->arSesUsr = $this->session->all_userdata();
 </div>
 <!-- / Navigatore -->
 <div id="breadcrumb" style="">
-    <!-- You are here: &nbsp; --><!--  http:// --><? //$_SERVER['HTTP_HOST']?><? //$_SERVER['REQUEST_URI']?>
+    <!-- You are here: &nbsp; --><!--  https:// --><?php //$_SERVER['HTTP_HOST']?><?php //$_SERVER['REQUEST_URI']?>
     <div id="menutop" style="float: left">
         <a href="<?php echo base_url(); ?>videos/index/" id="">Home</a> |
         <a href="<?php echo base_url(); ?>videos/topvideos/" id="">Top Videos</a> |

@@ -12,6 +12,7 @@ body {
     margin: 0 auto 0;
 }
 
+/*noinspection CssInvalidPropertyValue*/
 #middlepage {
     /*background: #FFFFFF url(../img/bgwall.jpg) repeat-x;*/
 
@@ -21,15 +22,8 @@ body {
     background: -moz-linear-gradient(top,  #FEB811,  #FFFFFF);
     */
 
-    background: radial-gradient(rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, .15) 30%, rgba(255, 255, 255, .3) 32%, rgba(255, 255, 255, 0) 33%) 0 0,
-    radial-gradient(rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, .1) 11%, rgba(255, 255, 255, .3) 13%, rgba(255, 255, 255, 0) 14%) 0 0,
-    radial-gradient(rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, .2) 17%, rgba(255, 255, 255, .43) 19%, rgba(255, 255, 255, 0) 20%) 0 110px,
-    radial-gradient(rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, .2) 11%, rgba(255, 255, 255, .4) 13%, rgba(255, 255, 255, 0) 14%) -130px -170px,
-    radial-gradient(rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, .2) 11%, rgba(255, 255, 255, .4) 13%, rgba(255, 255, 255, 0) 14%) 130px 370px,
-    radial-gradient(rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, .1) 11%, rgba(255, 255, 255, .2) 13%, rgba(255, 255, 255, 0) 14%) 0 0,
-    linear-gradient(45deg, #FEB812 0%, #FEB812 20%, #e27412 30%, #e27412 40%, #FEB812 50%, #FEB812 60%, #FEB812 70%, #e27412 80%, #b13e12 90%, #e27412 100%);
     background-size: 470px 470px, 970px 970px, 410px 410px, 610px 610px, 530px 530px, 730px 730px, 100% 100%;
-    background-color: #840b2a;
+    background: #840b2a radial-gradient(rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, .15) 30%, rgba(255, 255, 255, .3) 32%, rgba(255, 255, 255, 0) 33%) radial-gradient(rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, .1) 11%, rgba(255, 255, 255, .3) 13%, rgba(255, 255, 255, 0) 14%) radial-gradient(rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, .2) 17%, rgba(255, 255, 255, .43) 19%, rgba(255, 255, 255, 0) 20%) radial-gradient(rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, .2) 11%, rgba(255, 255, 255, .4) 13%, rgba(255, 255, 255, 0) 14%) radial-gradient(rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, .2) 11%, rgba(255, 255, 255, .4) 13%, rgba(255, 255, 255, 0) 14%) radial-gradient(rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, .1) 11%, rgba(255, 255, 255, .2) 13%, rgba(255, 255, 255, 0) 14%) linear-gradient(45deg, #FEB812 0%, #FEB812 20%, #e27412 30%, #e27412 40%, #FEB812 50%, #FEB812 60%, #FEB812 70%, #e27412 80%, #b13e12 90%, #e27412 100%) 0 0 0 0 0 110px -130px -170px 130px 370px 0 0;
 
 
 }
@@ -220,6 +214,7 @@ h3 a:hover {
     width: 320px;
 }
 
+/*noinspection ALL*/
 #home {
     height: 39px;
     width: 320px;
@@ -234,6 +229,7 @@ h3 a:hover {
     text-decoration: none;
 }
 
+/*noinspection ALL*/
 #services {
     height: 39px;
     width: 320px;
@@ -248,6 +244,7 @@ h3 a:hover {
     text-decoration: none;
 }
 
+/*noinspection CssUnknownTarget*/
 #work {
     height: 39px;
     width: 320px;
@@ -262,6 +259,7 @@ h3 a:hover {
     text-decoration: none;
 }
 
+/*noinspection CssUnknownTarget*/
 #about {
     height: 39px;
     width: 320px;
@@ -276,6 +274,7 @@ h3 a:hover {
     text-decoration: none;
 }
 
+/*noinspection CssUnknownTarget*/
 #blog {
     height: 39px;
     width: 320px;
@@ -290,6 +289,7 @@ h3 a:hover {
     text-decoration: none;
 }
 
+/*noinspection CssUnknownTarget*/
 #contact {
     height: 39px;
     width: 320px;
@@ -317,7 +317,7 @@ h3 a:hover {
 }
 
 .videoBoxElem img.tubevideo {
-    border: 0px solid #eee;
+    border: 0 solid #eee;
     width: 180px;
 }
 
@@ -326,16 +326,17 @@ h3 a:hover {
 --------------------------------------------------------------*/
 #feed-blogging li {
     list-style-type: none;
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
     height: 71px;
     width: 320px;
 }
 
+/*noinspection CssUnknownTarget*/
 #feed {
     height: 71px;
     width: 320px;
-    text-indent: 0px;
+    text-indent: 0;
     overflow: hidden;
     background: url(../img/feed.gif) top left no-repeat;
     display: block;
@@ -349,8 +350,9 @@ h3 a:hover {
 #blogging {
     height: 71px;
     width: 320px;
-    text-indent: 0px;
+    text-indent: 0;
     overflow: hidden;
+    /*noinspection CssUnknownTarget*/
     background: url(../img/blogging.gif) top left no-repeat;
     display: block;
 }
@@ -360,10 +362,11 @@ h3 a:hover {
     text-decoration: none;
 }
 
+/*noinspection CssUnknownTarget*/
 #award {
     height: 81px;
     width: 320px;
-    text-indent: 0px;
+    text-indent: 0;
     overflow: hidden;
     background: url(../img/awards.gif) top left no-repeat;
     display: block;
@@ -408,20 +411,20 @@ h3 a:hover {
 
 #content {
     width: 990px;
-    margin: 0px auto 0px auto;
-    padding: 0px;
+    margin: 0 auto 0 auto;
+    padding: 0;
 }
 
 #content p {
-    padding: 0px 0px 15px 0px;
-    margin: 0px;
+    padding: 0 0 15px 0;
+    margin: 0;
     line-height: 14px;
 }
 
 #content h1 {
     color: #888;
     font: bold 22px arial;
-    padding: 0px 0px 7px 0px;
+    padding: 0 0 7px 0;
     margin-bottom: 10px;
     border-bottom: 1px solid #E8E8E9;
 }
@@ -439,23 +442,23 @@ h3 a:hover {
 #content h2 {
     color: #00ADEF;
     font: bold 22px arial;
-    padding: 0px 0px 10px 0px;
-    margin: 0px;
+    padding: 0 0 10px 0;
+    margin: 0;
 }
 
 #contentleft {
     float: left;
     width: 640px;
-    margin: 25px 10px 0px 0px;
-    padding: 0px 0px 20px 0px;
+    margin: 25px 10px 0 0;
+    padding: 0 0 20px 0;
     min-height: 350px;
 }
 
 #contentright {
     float: left;
     width: 320px;
-    margin: 25px 0px 0px 0px;
-    padding: 0px 0px 10px 0px;
+    margin: 25px 0 0 0;
+    padding: 0 0 10px 0;
 }
 
 #home_content {
@@ -472,51 +475,51 @@ h3 a:hover {
 
 #navright ul {
     list-style: none;
-    margin: 0px 0px 0px 0px;
-    padding: 0px;
+    margin: 0 0 0 0;
+    padding: 0;
 }
 
 #navright ul li {
     display: inline;
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
 }
 
 #navtright ul li a {
     display: block;
     color: #888;
     text-decoration: none;
-    margin: 0px;
-    padding: 0px 0px 0px 0px;
+    margin: 0;
+    padding: 0 0 0 0;
 }
 
 #navright ul li a:hover {
-    padding: 0px;
+    padding: 0;
     color: #00ADEF;
 }
 
 #feedright ul {
     list-style: none;
-    margin: 0px 0px 20px 0px;
-    padding: 0px;
+    margin: 0 0 20px 0;
+    padding: 0;
 }
 
 #feedright ul li {
     display: inline;
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
 }
 
 #feedright ul li a {
     display: block;
     color: #333333;
     text-decoration: none;
-    margin: 0px;
-    padding: 0px 0px 0px 0px;
+    margin: 0;
+    padding: 0 0 0 0;
 }
 
 #feedright ul li a:hover {
-    padding: 0px;
+    padding: 0;
     color: #00ADEF;
 }
 
@@ -562,14 +565,14 @@ h3 a:hover {
 
 .sidebarcat ul li {
     margin: 0 0 3px 0;
-    padding: 0px;
+    padding: 0;
     font: bold 14px Calibri, Arial;
     border: 1px solid #E8E8E9;
 }
 
 .sidebarcat ul li a {
     display: block;
-    margin: 0px;
+    margin: 0;
     color: #FFF;
     padding: 5px 8px;
     background: #666666;
@@ -629,14 +632,14 @@ h3 a:hover {
 
 .sidebarvideo ul li {
     margin: 0 0 3px 0;
-    padding: 0px;
+    padding: 0;
     font: bold 14px Calibri, Arial;
     border: 1px solid #E8E8E9;
 }
 
 .sidebarvideo ul li a {
     display: block;
-    margin: 0px;
+    margin: 0;
     color: #FFF;
     padding: 5px 8px;
     background: #FF0000;
@@ -653,8 +656,8 @@ h3 a:hover {
 --------------------------------------------------------------*/
 li#downloadbutton {
     /*background: #608E8B;*/
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     /*background: url(../img/downloadEopp.gif) repeat-x;*/
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5E8D8A', endColorstr='#CE930D'); /* for IE */
     background: -webkit-gradient(linear, left top, left bottom, from(#5E8D8A), to(#CE930D)); /* for webkit browsers */
@@ -687,8 +690,7 @@ a.downloadbutton {
     width: 860px;
     height: 505px;
     color: #FFFFFF;
-    margin: 0px auto 0px;
-    margin-top: 20px;
+    margin: 20px auto 0;
     text-align: left;
     position: relative;
     line-height: 17px;
@@ -696,39 +698,39 @@ a.downloadbutton {
 
 #footer p {
     color: #FFFFFF;
-    padding: 0px;
+    padding: 0;
     list-style-type: none;
-    margin: 0px;
+    margin: 0;
 }
 
 #footer h1 {
     color: #FFFFFF;
     font-size: 16px;
-    font-family: Arial;
+    font-family: Arial, serif;
     font-weight: bold;
     border-bottom: 2px solid #8CDAF8;
-    padding: 0px 0px 2px 0px;
-    margin: 15px 0px 0px 0px;
+    padding: 0 0 2px 0;
+    margin: 15px 0 0 0;
 }
 
 #footer h2 {
     color: #FFFFFF;
     font-size: 16px;
-    font-family: Arial;
+    font-family: Arial, serif;
     font-weight: bold;
     border-bottom: 2px solid #8CDAF8;
-    padding: 0px 0px 2px 0px;
-    margin: 15px 0px 0px 0px;
+    padding: 0 0 2px 0;
+    margin: 15px 0 0 0;
 }
 
 #footer h3 {
     color: #FFFFFF;
     font-size: 16px;
-    font-family: Arial;
+    font-family: Arial, serif;
     font-weight: bold;
     border-bottom: 2px solid #8CDAF8;
-    padding: 0px 0px 2px 0px;
-    margin: 15px 0px 3px 0px;
+    padding: 0 0 2px 0;
+    margin: 15px 0 3px 0;
 }
 
 #footer a {
@@ -743,14 +745,14 @@ a.downloadbutton {
 
 #footer ul {
     list-style: none;
-    margin: 0px 0px 0px 0px;
-    padding: 0px;
+    margin: 0 0 0 0;
+    padding: 0;
 }
 
 #footer ul li {
     display: inline;
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
 }
 
 #footer ul li a {
@@ -758,8 +760,8 @@ a.downloadbutton {
     color: #FFFFFF;
     background: url(../img/icon.png) no-repeat;
     text-decoration: none;
-    margin: 0px;
-    padding: 5px 0px 5px 20px;
+    margin: 0;
+    padding: 5px 0 5px 20px;
     border-bottom: 1px solid #333;
 }
 
@@ -771,22 +773,22 @@ a.downloadbutton {
 #footerleft {
     float: left;
     width: 225px;
-    margin: 0px 20px 20px 0px;
-    padding: 0px;
+    margin: 0 20px 20px 0;
+    padding: 0;
 }
 
 #footermiddle {
     float: left;
     width: 230px;
-    margin: 0px 20px 20px 0px;
-    padding: 0px;
+    margin: 0 20px 20px 0;
+    padding: 0;
 }
 
 #footerright {
     float: right;
     width: 300px;
-    margin: 0px 0px 20px 0px;
-    padding: 0px;
+    margin: 0 0 20px 0;
+    padding: 0;
 }
 
 #footerright a {
@@ -802,13 +804,13 @@ a.downloadbutton {
 /* SEARCH FORM
 --------------------------------------------------------------*/
 #searchdiv {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
 #searchform {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     overflow: hidden;
 }
 
@@ -818,10 +820,10 @@ a.downloadbutton {
 
 #commentblock h2 {
     font-size: 16px;
-    font-family: Arial, Helvetica, Sans-Serif;
+    font-family: Arial, Helvetica, Sans-Serif, serif;
     color: #333333;
-    padding: 0px 0px 10px 0px;
-    margin: 0px;
+    padding: 0 0 10px 0;
+    margin: 0;
 }
 
 #commentblock {
@@ -830,31 +832,31 @@ a.downloadbutton {
     color: #333333;
     float: left;
     padding: 20px 20px 10px 20px;
-    margin: 10px 0px 0px 0px;
-    border: 0px solid #CCC;
+    margin: 10px 0 0 0;
+    border: 0 solid #CCC;
 }
 
 ol#commentlist {
     padding: 5px;
-    margin: 0px;
+    margin: 0;
     list-style-type: none;
 }
 
 .commentdate {
     font-size: 12px;
-    padding-left: 0px;
+    padding-left: 0;
 }
 
 #commentlist li p {
     margin-bottom: 8px;
     line-height: 20px;
-    padding: 0px;
+    padding: 0;
 }
 
 .commentname {
     color: #333333;
-    margin: 0px;
-    padding: 5px 5px 5px 0px;
+    margin: 0;
+    padding: 5px 5px 5px 0;
 }
 
 .commentinfo {
@@ -863,7 +865,7 @@ ol#commentlist {
 
 .commenttext {
     clear: both;
-    margin: 0px 0px 10px 0px;
+    margin: 0 0 10px 0;
     padding: 20px 10px 5px 10px;
     width: 360px;
     background: #FFFFFF url(../img/comment.gif) no-repeat top;
@@ -871,29 +873,29 @@ ol#commentlist {
 
 .commenttext-admin {
     clear: both;
-    margin: 0px 0px 10px 0px;
+    margin: 0 0 10px 0;
     padding: 20px 10px 5px 10px;
     width: 360px;
     background: #FFFFFF url(../img/comment.gif) no-repeat top;
 }
 
 #commentsformheader {
-    padding-left: 0px;
+    padding-left: 0;
 }
 
 #commentsform {
     text-align: center;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
 #commentsform form {
     text-align: left;
-    margin: 0px;
+    margin: 0;
 }
 
 #commentsform p {
-    margin: 0px;
+    margin: 0;
 }
 
 #commentsform form textarea {
@@ -902,31 +904,31 @@ ol#commentlist {
 
 p.comments_link img {
     border-style: none;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
 blockquote {
-    margin: 0px 0px 0px 0px;
-    padding: 0px 7px 0px 10px;
+    margin: 0 0 0 0;
+    padding: 0 7px 0 10px;
     background: #FFF;
     font-style: italic;
     color: #333333;
 }
 
 #content blockquote p {
-    margin: 0px 0px 20px 0px;
-    padding: 0px;
+    margin: 0 0 20px 0;
+    padding: 0;
 }
 
 #content p ol {
-    margin: 0px;
-    padding: 0px 0px 0px 20px;
+    margin: 0;
+    padding: 0 0 0 20px;
 }
 
 #content p ul {
-    margin: 0px;
-    padding: 0px 0px 0px 20px;
+    margin: 0;
+    padding: 0 0 0 20px;
 }
 
 #content p.headline {
@@ -965,14 +967,14 @@ img.border {
 
 img.feature {
     padding: 4px;
-    margin: 0 0 0px 0px;
+    margin: 0 0 0 0;
     display: inline;
     border: 1px solid #CCC;
 }
 
 #content p.visit {
     height: 22px;
-    padding: 0px 0 0 0;
+    padding: 0 0 0 0;
     margin-left: 400px;
     margin-bottom: 10px;
 }
@@ -986,7 +988,7 @@ img.feature {
     background: url(../img/div.gif) repeat-x left;
     height: 1px;
     padding: 0;
-    margin: 20px 0px 20px 0px;
+    margin: 20px 0 20px 0;
 }
 
 /* WORK
@@ -1019,8 +1021,8 @@ body.viewer #content {
 
 .star-rating {
     list-style: none;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     width: 125px;
     height: 25px;
     position: relative;
@@ -1029,11 +1031,12 @@ body.viewer #content {
 }
 
 .star-rating li {
-    padding: 0px;
-    margin: 0px; /*\*/
+    padding: 0;
+    margin: 0; /*\*/
     float: left; /* */
 }
 
+/*noinspection DuplicatedCode*/
 .star-rating li a {
     display: block;
     width: 25px;
@@ -1043,19 +1046,19 @@ body.viewer #content {
     text-indent: -9000px;
     z-index: 20;
     position: absolute;
-    padding: 0px;
+    padding: 0;
     overflow: hidden;
 }
 
 .star-rating li a:hover {
     background: url(../img/alt_star.gif) left bottom;
     z-index: 2;
-    left: 0px;
+    left: 0;
     border: none;
 }
 
 .star-rating a.one-star {
-    left: 0px;
+    left: 0;
 }
 
 .star-rating a.one-star:hover {
@@ -1119,7 +1122,7 @@ body.viewer #content {
 #contentRtUsers .userBox {
     float: left;
     border: 1px solid transparent;
-    margin: 0px 2px 2px 0px;
+    margin: 0 2px 2px 0;
     padding: 10px 0 0 0;
     width: 71px;
     min-height: 97px;
@@ -1135,7 +1138,6 @@ body.viewer #content {
 
 #contentRtTags {
     padding: 15px;
-    background: #000;
     margin: 5px 0 0 0;
     background: #fff;
     /*border: 1px solid #eee*/
@@ -1257,7 +1259,6 @@ body.viewer #content {
 .boxgrid img.tubevideo:hover {
     opacity: 0.5;
     -MS-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
     -ms-filter: "progid:DXImageTransform.Microsoft.Blur(pixelRadius=1)";
     filter: progid:DXImageTransform.Microsoft.Blur(pixelRadius=1);
 }
@@ -1296,6 +1297,6 @@ body.viewer #content {
 }
 
 .error {
-    font-family: Arial;
+    font-family: Arial, serif;
     color: #BB4B00;
 }

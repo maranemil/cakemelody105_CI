@@ -205,6 +205,7 @@ h3 a:hover {
     width: 320px;
 }
 
+/*noinspection CssUnknownTarget*/
 #home {
     height: 39px;
     width: 320px;
@@ -219,6 +220,7 @@ h3 a:hover {
     text-decoration: none;
 }
 
+/*noinspection CssUnknownTarget*/
 #services {
     height: 39px;
     width: 320px;
@@ -233,6 +235,7 @@ h3 a:hover {
     text-decoration: none;
 }
 
+/*noinspection CssUnknownTarget*/
 #work {
     height: 39px;
     width: 320px;
@@ -247,6 +250,7 @@ h3 a:hover {
     text-decoration: none;
 }
 
+/*noinspection CssUnknownTarget*/
 #about {
     height: 39px;
     width: 320px;
@@ -261,6 +265,7 @@ h3 a:hover {
     text-decoration: none;
 }
 
+/*noinspection CssUnknownTarget*/
 #blog {
     height: 39px;
     width: 320px;
@@ -275,6 +280,7 @@ h3 a:hover {
     text-decoration: none;
 }
 
+/*noinspection CssUnknownTarget*/
 #contact {
     height: 39px;
     width: 320px;
@@ -317,6 +323,7 @@ h3 a:hover {
     width: 320px;
 }
 
+/*noinspection CssUnknownTarget*/
 #feed {
     height: 71px;
     width: 320px;
@@ -331,6 +338,7 @@ h3 a:hover {
     text-decoration: none;
 }
 
+/*noinspection CssUnknownTarget*/
 #blogging {
     height: 71px;
     width: 320px;
@@ -345,6 +353,7 @@ h3 a:hover {
     text-decoration: none;
 }
 
+/*noinspection CssUnknownTarget*/
 #award {
     height: 81px;
     width: 320px;
@@ -1017,6 +1026,7 @@ body.viewer #content {
     float: left; /* */
 }
 
+/*noinspection DuplicatedCode*/
 .star-rating li a {
     display: block;
     width: 25px;

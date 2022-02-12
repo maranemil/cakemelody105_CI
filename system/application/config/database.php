@@ -1,4 +1,6 @@
-<?php if (!defined('BASEPATH')) exit('No direct script access allowed');
+<?php if (!defined('BASEPATH')) {
+    exit('No direct script access allowed');
+}
 /*
 | -------------------------------------------------------------------
 | DATABASE CONNECTIVITY SETTINGS
@@ -28,9 +30,9 @@
 |	['dbcollat'] The character collation used in communicating with the database
 |
 | The $active_group variable lets you choose which connection group to
-| make active.  By default there is only one group (the "default" group).
+| make active.  By default, there is only one group (the "default" group).
 |
-| The $active_record variables lets you determine whether or not to load
+| The $active_record variables lets you determine whether to load
 | the active record class
 */
 
@@ -38,26 +40,23 @@ $active_group = "default";
 $active_record = TRUE;
 
 // OFFLINE
-if (stristr($_SERVER['HTTP_HOST'], 'localhost') || $_SERVER['SERVER_ADDR'] == '127.0.0.1') {
-    $iServer = 0;
-} // RTS Development
-else {
+$iServer = 0;
+if ($_SERVER['SERVER_ADDR'] === '127.0.0.1' || stripos($_SERVER['HTTP_HOST'], 'localhost') !== false  ) {
     $iServer = 1;
 }
 
-if ($iServer == 1) {
+
+$db['default']['hostname'] = "localhost";
+if ($iServer === 1) {
     // online
-    $db['default']['hostname'] = "localhost";
     $db['default']['username'] = "user";
     $db['default']['password'] = "pass";
-    $db['default']['database'] = "cakemelody104";
 } else {
     // offline
-    $db['default']['hostname'] = "localhost";
     $db['default']['username'] = "root";
     $db['default']['password'] = "";
-    $db['default']['database'] = "cakemelody104";
 }
+$db['default']['database'] = "cakemelody104";
 
 $db['default']['dbdriver'] = "mysql"; // oci8 oracle
 $db['default']['dbprefix'] = "";
