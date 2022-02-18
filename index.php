@@ -60,13 +60,12 @@ $application_folder = "application";
 |
 */
 if (strpos($system_folder, '/') === false) {
-   if (function_exists('realpath') && @realpath(__DIR__) !== false) {
-	  $system_folder = realpath(__DIR__) . '/' . $system_folder;
-   }
-}
-else {
-   // Swap directory separators to Unix style for consistency
-   $system_folder = str_replace("\\", "/", $system_folder);
+    if (function_exists('realpath') && @realpath(__DIR__) !== false) {
+        $system_folder = realpath(__DIR__) . '/' . $system_folder;
+    }
+} else {
+    // Swap directory separators to Unix style for consistency
+    $system_folder = str_replace("\\", "/", $system_folder);
 }
 
 /*
@@ -87,9 +86,8 @@ define('FCPATH', str_replace(SELF, '', __FILE__));
 define('BASEPATH', $system_folder . '/');
 
 if (is_dir($application_folder)) {
-   define('APPPATH', $application_folder . '/');
-}
-else {
+    define('APPPATH', $application_folder . '/');
+} else {
     define('APPPATH', BASEPATH . $application_folder . '/');
 }
 

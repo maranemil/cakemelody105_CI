@@ -1,3 +1,5 @@
+// noinspection JSUnresolvedFunction,JSUnresolvedVariable
+
 /*
 	Header Information------------------------------------[Do Not Remove This Header]--
 	Title: OO Dom Image Rollover
@@ -15,28 +17,28 @@
 */
 
 function imageholderclass(){
-	this.over=new Array();
-	this.down=new Array();
-	this.src=new Array();
+	this.over=[];
+	this.down=[];
+	this.src=[];
 	this.store=store;
 	
 	function store(src, down, over){
-		var AL=this.src.length;
+		const AL = this.src.length;
 		this.src[AL]=new Image(); this.src[AL].src=src;
 		this.over[AL]=new Image(); this.over[AL].src=over;
 		this.down[AL]=new Image(); this.down[AL].src=down;
 	}
 }
 
-var ih = new imageholderclass();
-var mouseisdown=0;
+const ih = new imageholderclass();
+let mouseisdown = 0;
 
 function preloader(t){
-	for(i=0;i<t.length;i++){
+	for(let i=0;i<t.length;i++){
 		if(t[i].getAttribute('srcover')||t[i].getAttribute('srcdown')){
 			
 			storeimages(t[i]);
-			var checker='';
+			let checker = '';
 			checker=(t[i].getAttribute('srcover'))?checker+'A':checker+'';
 			checker=(t[i].getAttribute('srcdown'))?checker+'B':checker+'';
 			
@@ -52,7 +54,7 @@ function preloader(t){
 	}
 }
 function mouseup(t){
-	var newmouseup;
+	let newmouseup;
 	if(t.onmouseup){
 		t.oldmouseup=t.onmouseup;
 		newmouseup=function(){mouseisdown=0;this.src=this.getAttribute("srcover");this.oldmouseup();}
@@ -63,7 +65,7 @@ function mouseup(t){
 }
 
 function mouseup2(t){
-	var newmouseup;
+	let newmouseup;
 	if(t.onmouseup){
 		t.oldmouseup=t.onmouseup;
 		newmouseup=function(){mouseisdown=0;this.src=this.getAttribute("oldsrc");this.oldmouseup();}
@@ -73,17 +75,17 @@ function mouseup2(t){
 }
 
 function mousedown(t){
-	var newmousedown;
+	let newmousedown;
 	if(t.onmousedown){
 		t.oldmousedown=t.onmousedown;
-		newmousedown=function(){if(mouseisdown==0){this.src=this.getAttribute("srcdown");this.oldmousedown();}}
+		newmousedown=function(){if(mouseisdown===0){this.src=this.getAttribute("srcdown");this.oldmousedown();}}
 	}
-	else{newmousedown=function(){if(mouseisdown==0){this.src=this.getAttribute("srcdown");}}}
+	else{newmousedown=function(){if(mouseisdown===0){this.src=this.getAttribute("srcdown");}}}
 	t.onmousedown=newmousedown;
 }
 
 function mouseover(t){
-	var newmouseover;
+	let newmouseover;
 	if(t.onmouseover){
 		t.oldmouseover=t.onmouseover;
 		newmouseover=function(){this.src=this.getAttribute("srcover");this.oldmouseover();}
@@ -93,7 +95,7 @@ function mouseover(t){
 }
 
 function mouseout(t){
-	var newmouseout;
+	let newmouseout;
 	if(t.onmouseout){
 		t.oldmouseout=t.onmouseout;
 		newmouseout=function(){this.src=this.getAttribute("oldsrc");this.oldmouseout();}
@@ -103,16 +105,16 @@ function mouseout(t){
 }
 
 function storeimages(t){
-	var s=(t.getAttribute('src'))?t.getAttribute('src'):'';
-	var d=(t.getAttribute('srcdown'))?t.getAttribute('srcdown'):'';
-	var o=(t.getAttribute('srcover'))?t.getAttribute('srcover'):'';
+	const s = (t.getAttribute('src')) ? t.getAttribute('src') : '';
+	const d = (t.getAttribute('srcdown')) ? t.getAttribute('srcdown') : '';
+	const o = (t.getAttribute('srcover')) ? t.getAttribute('srcover') : '';
 	ih.store(s,d,o);
 }
 
 function preloadimgsrc(){
 	if(!document.getElementById) return;
-	var it=document.getElementsByTagName('IMG');
-	var it2=document.getElementsByTagName('INPUT');
+	const it = document.getElementsByTagName('IMG');
+	const it2 = document.getElementsByTagName('INPUT');
 	preloader(it);
 	preloader(it2);
 }

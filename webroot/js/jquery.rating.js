@@ -21,27 +21,27 @@
  */
 jQuery.fn.rating = function(){
 	return this.each(function(){
-		var div = jQuery("<div/>").attr({
+		const div = jQuery("<div/>").attr({
 			title: this.title,
 			className: this.className
-		}).insertAfter( this );
+		}).insertAfter(this);
 
 		jQuery(this).find("select option").each(function(){
 			div.attr('class','rating ratingPos');
-			div.append( this.value == "0" ?"":
+			div.append( this.value === "0" ?"":
 				"<div class='star'><a href='#" + this.value + "' title='Give it a " +
 					this.value + " Star Rating'>" + this.value + "</a></div>" );
 		});
 
 		div.append("<div class='cancel'><a href='?' title='"+this.title+"'>"+this.title+"</a></div>");
 
-		var averageRating = this.title.split(/:\s*/)[1].split("."),
+		let averageRating = this.title.split(/:\s*/)[1].split("."),
 			url = this.action,
 			averageIndex = averageRating[0],
 			averagePercent = averageRating[1];
 
 		// hover events and focus events added
-		var stars = div.find("div.star")
+		const stars = div.find("div.star")
 			.mouseover(drainFill).focus(drainFill)
 			.mouseout(drainReset).blur(drainReset)
 			.click(click);
@@ -64,7 +64,7 @@ jQuery.fn.rating = function(){
 			averageIndex = stars.index(this) + 1;
 			averagePercent = 0;
 
-			if ( averageIndex == 0 )
+			if ( averageIndex === 0 )
 				drain();
 
 			jQuery.post(url,{
@@ -92,7 +92,7 @@ jQuery.fn.rating = function(){
 		function reset(){
 			stars.lt(averageIndex).addClass("on");
 
-			var percent = averagePercent ? averagePercent * 10 : 0;
+			const percent = averagePercent ? averagePercent * 10 : 0;
 			if (percent > 0)
 				stars.eq(averageIndex).addClass("on").children("a").css("width", percent + "%");
 		}
@@ -100,5 +100,6 @@ jQuery.fn.rating = function(){
 };
 
 // fix ie6 background flicker problem.
-if ( jQuery.browser.msie == true )
+if ( jQuery.browser.msie === true ) {
 	document.execCommand('BackgroundImageCache', false, true);
+}
